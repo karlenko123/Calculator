@@ -77,5 +77,10 @@ button:active {
 
 #currentScreen {
     font-size: 40px;
+    min-height: 60px;
+}
 
+#previousScreen {
+    font-size: 20px;
+    min-height: 30px;
 }
