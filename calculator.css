@@ -73,6 +73,8 @@ button:active {
     justify-content: space-around;
     text-align: right;
     flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 #currentScreen {
