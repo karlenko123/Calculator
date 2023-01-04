@@ -52,11 +52,15 @@ function clear() {
 }
 
 function setOperation(operator) {
+    if (currentOperation !== null && currentText.textContent == '0') {
+        evaluate()
+        return
+    }
     if (currentOperation !== null) evaluate()
     firstNumber = currentText.textContent
     currentOperation = operator
     previousText.textContent = `${firstNumber} ${currentOperation}`
-    currentText.textContent = ''
+    currentText.textContent = '0'
 }
 
 function evaluate() {
