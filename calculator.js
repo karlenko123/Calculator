@@ -96,3 +96,19 @@ function roundResult(number) {
     }
   }
 
+window.addEventListener('keydown', (e) => {
+  if (e.key >= 0 && e.key<=9) appendNumber(e.key)
+  if (e.key == 'Enter' || e.key =='=') evaluate() 
+  if (e.key == '.') appendPoint()
+  if (e.key == 'Backspace') deleteNumber()
+  if (e.key == 'Escape') clear()
+  if (e.key == '*' || e.key == '+' || e.key == '-' || e.key == '/') 
+    setOperation(operationConverter(e.key))
+})
+
+function operationConverter(key) {
+    if (key === '*') return 'x'
+    if (key === '/') return '÷'
+    if (key === '+') return '+'
+    if (key === '-') return '-'
+}
